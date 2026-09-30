@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: demo-campus
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/campus?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root123
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  # mapper 接口通过 @Select/@Insert 注解写 SQL，无 XML
+
+logging:
+  level:
+    com.demo.campus: debug
